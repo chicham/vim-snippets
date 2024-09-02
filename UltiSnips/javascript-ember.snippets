@@ -11,7 +11,6 @@ import Application from '@ember/application';
 export default Application.extend({
 	${0://Properties here...}
 });
-endsnippet
 
 # Models
 snippet emod "import DS from 'ember-data';"
@@ -20,7 +19,6 @@ import DS from 'ember-data';
 export default DS.Model.extend({
 	${0://Properties here...}
 });
-endsnippet
 
 # Controller
 snippet econtroller "import Controller from '@ember/controller';"
@@ -29,7 +27,6 @@ import Controller from '@ember/controller';
 export default Controller.extend({
 	${0://Properties here...}
 });
-endsnippet
 
 # Route
 snippet eroute "import Route from '@ember/routing/route';"
@@ -38,7 +35,6 @@ import Route from '@ember/routing/route';
 export default Route.extend({
 	${0://Properties here...}
 });
-endsnippet
 
 # Component
 snippet ecomponent "import Component from '@ember/component';"
@@ -47,7 +43,6 @@ import Component from '@ember/component';
 export default Component.extend({
 	${0://Properties here...}
 });
-endsnippet
 
 # Object
 snippet eobj "import EmberObject from '@ember/object';"
@@ -56,7 +51,6 @@ import EmberObject from '@ember/object';
 export default EmberObject.extend({
 	${0://Properties here...}
 });
-endsnippet
 
 # Mixin
 snippet emix "App.MixinName = Ember.Model.extend({...});"
@@ -65,37 +59,30 @@ import Mixin from '@ember/object/mixin';
 export default Mixin.create({
 	${0://Properties here...}
 });
-endsnippet
 
 # Ember getter and setter
 snippet eget "this.get('property');"
 ${1:this}.get('${2:property}');
-endsnippet
 
 snippet eset "this.set('property', value);"
 ${1:this}.set('${2:property}', ${3:value});
-endsnippet
 
 # Computed properties
 snippet cproimport "import { computed } from '@ember/object';"
 import { computed } from '@ember/object';
-endsnippet
 
 snippet cpro "property_name: computed('...', function() {...}),"
 ${1:property_name}: computed('${3:argument}', function() {
 	${0://body...}
 }),
-endsnippet
 
 # Observers
 snippet prooimport "import { observer } from '@ember/object';"
 import { observer } from '@ember/object';
-endsnippet
 
 snippet proo "property_name: observer('...', function() {...}),"
 ${1:property_name}: observer('${3:argument}', function() {
 	${0://body...}
 }),
-endsnippet
 
 # vim:ft=snippets:

@@ -29,7 +29,7 @@ snippet ch "channel"
 
 snippet cs "case"
 	case ${1:value}:
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 
 snippet co "constants with iota"
 	const (
@@ -46,7 +46,7 @@ snippet df "defer"
 snippet dfr "defer recover"
 	defer func() {
 		if err := recover(); err != nil {
-			${0:${VISUAL}}
+			${0:$TM_SELECTED_TEXT}
 		}
 	}()
 
@@ -65,20 +65,20 @@ snippet inf "full interface "
 
 snippet if "if condition"
 	if $1 {
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	}
 
 
 snippet ife "if else condition"
 	if $1 {
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	} else {
 		${0}
 	}
 
 snippet el "else"
 	else {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 
 snippet ir "if error not nil, return err"
@@ -104,17 +104,17 @@ snippet f6 "float64"
 
 snippet for "for loop"
 	for ${1}{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 
 snippet fori "for int loop"
 	for ${2:i} := 0; $2 < ${1:count}; $2${3:++} {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 
 snippet forr "for range loop"
 	for ${1:e} := range ${2:collection} {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 
 snippet fun "function"
@@ -131,7 +131,7 @@ snippet fum "method"
 
 snippet fumh "http handler function on receiver"
 	func (${1:receiver} ${2:type}) ${3:funcName}(${4:w} http.ResponseWriter, ${5:r} *http.Request) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 
 snippet lf "log printf"
@@ -219,7 +219,7 @@ snippet ga "goroutine anonymous function"
 
 snippet test "test function"
 	func Test${1:name}(t *testing.T) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 
 snippet testt "table test function"
@@ -234,7 +234,7 @@ snippet testt "table test function"
 
 		for _, test := range tests {
 			t.Run(test.name, func(t *testing.T) {
-				${0:${VISUAL}}
+				${0:$TM_SELECTED_TEXT}
 			})
 		}
 	}

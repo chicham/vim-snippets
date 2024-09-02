@@ -22,7 +22,6 @@ public function get${1/\w+\s*/\u$0/}()`!p snip.rv = ': '+t[2] if isPHPScalarType
 {
     return $this->$1;
 }
-endsnippet
 
 snippet sm "PHP Class Setter" b
 /**
@@ -37,7 +36,6 @@ public function set${1/\w+\s*/\u$0/}(${4:${2/(void|string|int|integer|double|flo
 
     ${5:return $this;}
 }
-endsnippet
 
 snippet gs "PHP Class Getter Setter" b
 /**
@@ -62,7 +60,6 @@ public function set${1/\w+\s*/\u$0/}(${4:${2/(void|string|int|integer|double|flo
 
     ${5:return $this;}
 }
-endsnippet
 
 snippet pub "Public function" b
 /**
@@ -72,10 +69,9 @@ snippet pub "Public function" b
  */
 public function ${1:name}(${2:$param})
 {
-	${VISUAL}${5:return null;}
+	$TM_SELECTED_TEXT${5:return null;}
 }
 $0
-endsnippet
 
 snippet pro "Protected function" b
 /**
@@ -85,10 +81,9 @@ snippet pro "Protected function" b
  */
 protected function ${1:name}(${2:$param})
 {
-	${VISUAL}${5:return null;}
+	$TM_SELECTED_TEXT${5:return null;}
 }
 $0
-endsnippet
 
 snippet pri "Private function" b
 /**
@@ -98,10 +93,9 @@ snippet pri "Private function" b
  */
 private function ${1:name}(${2:$param})
 {
-	${VISUAL}${5:return null;}
+	$TM_SELECTED_TEXT${5:return null;}
 }
 $0
-endsnippet
 
 snippet pubs "Public static function" b
 /**
@@ -111,10 +105,9 @@ snippet pubs "Public static function" b
  */
 public static function ${1:name}(${2:$param})
 {
-	${VISUAL}${5:return null;}
+	$TM_SELECTED_TEXT${5:return null;}
 }
 $0
-endsnippet
 
 snippet pros "Protected static function" b
 /**
@@ -124,10 +117,9 @@ snippet pros "Protected static function" b
  */
 protected static function ${1:name}(${2:$param})
 {
-	${VISUAL}${5:return null;}
+	$TM_SELECTED_TEXT${5:return null;}
 }
 $0
-endsnippet
 
 snippet pris "Private static function" b
 /**
@@ -137,23 +129,20 @@ snippet pris "Private static function" b
  */
 private static function ${1:name}(${2:$param})
 {
-	${VISUAL}${5:return null;}
+	$TM_SELECTED_TEXT${5:return null;}
 }
 $0
-endsnippet
 
 snippet fu "Function snip" b
 function ${1:name}(${2:$param})
 {
-	${VISUAL}${3:return null;}
+	$TM_SELECTED_TEXT${3:return null;}
 }
 $0
-endsnippet
 
 snippet new "New class instance" b
 $${1:variableName} = new ${2:${1/\w+\s*/\u$0/}}($3);
 $0
-endsnippet
 
 snippet ns "namespace declaration" b
 namespace ${1:`!p
@@ -162,7 +151,6 @@ m = re.search(r'[A-Z].+(?=/)', relpath)
 if m:
 	snip.rv = m.group().replace('/', '\\')
 `};
-endsnippet
 
 snippet class "Class declaration template" b
 <?php
@@ -181,7 +169,6 @@ if m:
 class $1
 {
 }
-endsnippet
 
 snippet interface "Interface declaration template" b
 <?php
@@ -201,7 +188,6 @@ interface $1
 {
 	public function ${3:someFunction}();$4
 }
-endsnippet
 
 snippet trait "Trait declaration template" b
 <?php
@@ -220,7 +206,6 @@ if m:
 trait $1
 {
 }
-endsnippet
 
 snippet construct "__construct()" b
 /**
@@ -230,7 +215,6 @@ public function __construct(${1:$dependencies})
 {${1/\w* ?\$(\w+)(, )*/\n        $this->$1 = $$1;/g}
 }
 $0
-endsnippet
 
 # PHPUnit snippets
 snippet testcase "class XYZTest extends \PHPUnit_Framework_TestCase { ... }"
@@ -252,10 +236,9 @@ snip.rv = re.match(r'.*(?=\.)', fn).group()
 {
 	public function test$1()
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 }
-endsnippet
 
 snippet testcase6 "class XYZTest extends TestCase { ... }"
 <?php
@@ -278,9 +261,8 @@ snip.rv = re.match(r'.*(?=\.)', fn).group()
 {
 	public function test$1()
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 }
-endsnippet
 
 # :vim:ft=snippets:

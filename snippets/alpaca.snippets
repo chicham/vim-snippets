@@ -11,24 +11,24 @@ snippet expt
 snippet fn
 	val ${1:fn} ${2}: fn ${3:'a} -> ${4:'a}
 	let $1 ${5} =
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 snippet mat
 	match ${1} with
 	| ${2} -> ${0}
 snippet -
 	| ${1} -> ${0}
 snippet let
-	let ${1} = ${2:${VISUAL}} in
+	let ${1} = ${2:$TM_SELECTED_TEXT} in
 	${0}
 snippet letf
 	let ${1} =
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 snippet ty
 	type ${1:msg}
 		= ${0}
 snippet test
 	test "${1}" =
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 snippet doc
 	{-| ${0}
 	-}

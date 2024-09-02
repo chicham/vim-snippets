@@ -7,133 +7,107 @@ priority -49
 
 snippet break "@break"
 @break
-endsnippet
 
 snippet component "@component directive"
 @component('$1')
-	${2:${VISUAL}}
+	${2:$TM_SELECTED_TEXT}
 @endcomponent
-endsnippet
 
 snippet each "@each directive"
 @each('$1', $$2, '$3')
-endsnippet
 
 snippet else "@else directive"
 @else
-endsnippet
 
 snippet eif "@else if directive"
 @else if ($1)
-	${2:${VISUAL}}
-endsnippet
+	${2:$TM_SELECTED_TEXT}
 
 snippet for "@for directive"
 @for ($1)
-	${2:${VISUAL}}
+	${2:$TM_SELECTED_TEXT}
 @endfor
-endsnippet
 
 snippet foreach "@foreach directive"
 @foreach ($$1 as $$2)
-	${3:${VISUAL}}
+	${3:$TM_SELECTED_TEXT}
 @endforeach
-endsnippet
 
 snippet extends "@extends directive"
 @extends('$1')
-endsnippet
 
 snippet if "@if directive"
 @if ($1)
-	${2:${VISUAL}}
+	${2:$TM_SELECTED_TEXT}
 @endif
-endsnippet
 
 snippet ife "@if @else structure"
 @if ($1)
-	${2:${VISUAL}}
+	${2:$TM_SELECTED_TEXT}
 @else
-	${3:${VISUAL}}
+	${3:$TM_SELECTED_TEXT}
 @endif
-endsnippet
 
 snippet include "@include directive"
 @include('$1')
-endsnippet
 
 snippet includeIf "@includeIf directive"
 @includeIf('$1')
-endsnippet
 
 snippet isset "@isset directive"
 @isset
-	${1:${VISUAL}}
+	${1:$TM_SELECTED_TEXT}
 @endisset
-endsnippet
 
 snippet inject "@inject directive"
 @inject('$1', '$2')
-endsnippet
 
 snippet lang "@lang directive" i
 @lang('$1')
-endsnippet
 
 snippet php "@php directive"
 @php
-	${1:${VISUAL}}
+	${1:$TM_SELECTED_TEXT}
 @endphp
-endsnippet
 
 snippet push "@push directive"
 @push('$1')
-	${2:${VISUAL}}
+	${2:$TM_SELECTED_TEXT}
 @endpush
-endsnippet
 
 snippet section "@section directive"
 @section('$1')
-endsnippet
 
 snippet show "@show directive"
 @show
-endsnippet
 
 snippet slot "@slot directive"
 @slot('$1')
-	${2:${VISUAL}}
+	${2:$TM_SELECTED_TEXT}
 @endslot
-endsnippet
 
 snippet unless "@unless directive"
 @unless
-	${1:${VISUAL}}
+	${1:$TM_SELECTED_TEXT}
 @endunless
-endsnippet
 
 snippet verbatim "@verbatim directive"
 @verbatim
 	${0:$VISUAL}
 @endverbatim
-endsnippet
 
 snippet wh "@while directive"
 @while ($1)
-	${2:${VISUAL}}
+	${2:$TM_SELECTED_TEXT}
 @endwhile
-endsnippet
 
 snippet yield "@yield directive"
 @yield('$1')
-endsnippet
 
 snippet { "{{ }} statement." i
 {{ $1 }}
-endsnippet
 
 snippet {! "{!! !!} statement" i
 {!! $1 !!}
-endsnippet
 
 # vim:ft=snippets:

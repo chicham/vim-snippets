@@ -1,6 +1,6 @@
 snippet do
 	do
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	end
 snippet put IO.puts
 	IO.puts("${0}")
@@ -10,13 +10,13 @@ snippet insl IO.inspect with label
 	IO.inspect(${0}label: "${1:label}")
 snippet if if .. do .. end
 	if ${1} do
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	end
 snippet if: if .. do: ..
 	if $1, do: ${0}
 snippet ife if .. do .. else .. end
 	if $1 do
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	else
 		${0}
 	end
@@ -24,13 +24,13 @@ snippet ife: if .. do: .. else:
 	if $1, do: ${2}, else: ${0}
 snippet unless unless .. do .. end
 	unless ${1} do
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	end
 snippet unless: unless .. do: ..
 	unless $1, do: ${0}
 snippet unlesse unless .. do .. else .. end
 	unless $1 do
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	else
 		${0}
 	end
@@ -39,7 +39,7 @@ snippet unlesse: unless .. do: .. else:
 snippet cond
 	cond do
 		${1} ->
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	end
 snippet case
 	case ${1} do
@@ -220,7 +220,7 @@ snippet setupa
 	end
 snippet try try .. rescue .. end
 	try do
-		${1:${VISUAL}}
+		${1:$TM_SELECTED_TEXT}
 	rescue
 		${2} -> ${0}
 	end

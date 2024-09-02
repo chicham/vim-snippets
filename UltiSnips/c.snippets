@@ -32,19 +32,16 @@ priority -50
 
 snippet def "#define ..."
 #define $1
-endsnippet
 
 snippet #ifndef "#ifndef ... #define ... #endif"
 #ifndef ${1/([A-Za-z0-9_]+).*/$1/}
 #define ${1:SYMBOL} ${2:value}
 #endif /* ifndef $1 */
-endsnippet
 
 snippet #if "#if #endif" b
 #if ${1:0}
-${VISUAL}$0
+$TM_SELECTED_TEXT$0
 #endif
-endsnippet
 
 snippet mark "#pragma mark (mark)"
 #if 0
@@ -53,27 +50,23 @@ ${1:#pragma mark -
 #endif
 
 $0
-endsnippet
 
 snippet main "main() (main)"
 int main(int argc, char *argv[])
 {
-	${VISUAL}$0
+	$TM_SELECTED_TEXT$0
 	return 0;
 }
-endsnippet
 
 snippet for "for loop (for)"
 for (${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
-	${VISUAL}$0
+	$TM_SELECTED_TEXT$0
 }
-endsnippet
 
 snippet fori "for int loop (fori)"
 for (${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
-	${VISUAL}$0
+	$TM_SELECTED_TEXT$0
 }
-endsnippet
 
 snippet fora "for-loop" b
 for (${1:var}; ${2:condition}; `!p
@@ -83,7 +76,6 @@ if len(t[1]) > 0:
 	
 	$0
 } /* for ($1; $2; `!p if len(t[1]) > 0: snip.rv = t[1].split('=')[0].split()[-1]`++) */
-endsnippet
 
 snippet once "Include header once only guard"
 #ifndef ${1:`!p
@@ -96,42 +88,35 @@ else:
 	snip.rv = snip.c`}
 #define $1
 
-${VISUAL}$0
+$TM_SELECTED_TEXT$0
 
 #endif /* end of include guard: $1 */
-endsnippet
 
 snippet fprintf "fprintf ..."
 fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
-endsnippet
 
 snippet eli "else if .. (eli)"
 else if (${1:/* condition */}) {
-	${VISUAL}$0
+	$TM_SELECTED_TEXT$0
 }
-endsnippet
 
 post_jump "printf_expand_args(snip)"
 snippet "printf" "printf with auto-expand args" wr
 printf("$1\n"$2);
-endsnippet
 
 snippet st "struct"
 struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`} {
 	${0:/* data */}
 };
-endsnippet
 
 snippet fun "function" b
 ${1:void} ${2:function_name}($3)
 {
-	${VISUAL}$0
+	$TM_SELECTED_TEXT$0
 }
-endsnippet
 
 snippet fund "function declaration" b
 ${1:void} ${2:function_name}($3);
-endsnippet
 
 global !p
 def split_line(text):
@@ -156,16 +141,15 @@ snippet head "File Header" b
 *
 * Author:           ${2}  
 * Created:          `date +%m/%d/%y` 
-* Description:      ${4:${VISUAL}}
+* Description:      ${4:$TM_SELECTED_TEXT}
 *****************************************************************************/
 ${0}
-endsnippet
 
 post_jump "if snip.tabstop == 0 : split_line(snip.tabstops[4].current_text)"
 snippet func "Function Header" 
 /******************************************************************************
 * Function:         $1
-* Description:      ${4:${VISUAL}}
+* Description:      ${4:$TM_SELECTED_TEXT}
 * Where:`!p 
 snip.rv = ""
 snip >> 2
@@ -182,5 +166,4 @@ snip << 2
 ${1}($2){
 	${0}
 }
-endsnippet
 # vim:ft=snippets:

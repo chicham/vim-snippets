@@ -1,14 +1,14 @@
 snippet if # {{#if value}} ... {{/if}}
 	{{#if ${1:value}}}
-	${0:${VISUAL}}
+	${0:$TM_SELECTED_TEXT}
 	{{/if}}
 snippet ifn # {{#unless value}} ... {{/unless}}
 	{{#unless ${1:value}}}
-	${0:${VISUAL}}
+	${0:$TM_SELECTED_TEXT}
 	{{/unless}}
 snippet ife # {{#if value}} ... {{else}} .. {{/if}}
 	{{#if ${1:value}}}
-	${2:${VISUAL}}
+	${2:$TM_SELECTED_TEXT}
 	{{else}}
 	${3}
 	{{/if}}

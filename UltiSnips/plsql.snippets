@@ -58,7 +58,6 @@ snippet doc "Document comment"
 	/*
 	 *	${0: comment ...}
 	 */
-endsnippet
 
 snippet hdr "Header Documentation"
 -- #############################################################################
@@ -79,7 +78,6 @@ snippet hdr "Header Documentation"
 -- # 1.0	  `!p snip.rv = today()`	Amit Maindola		 Initial Version
 -- #############################################################################
 
-endsnippet
 
 snippet pkggbl	"Package Global variables"
    -- Declare Global Variables
@@ -92,79 +90,60 @@ snippet pkggbl	"Package Global variables"
 
    -- Declare User Global Types
 
-endsnippet
 
 snippet flushca "Flush Cache"
 ALTER SYSTEM FLUSH BUFFER_CACHE;
-endsnippet
 
 snippet flushsp "Flush Shared Pool"
 ALTER SYSTEM FLUSH SHARED_POOL;
-endsnippet
 
 snippet err
 	show errors;
-endsnippet
 
 snippet sel "Select statement"
 SELECT ${0:*} FROM ${1} WHERE 1 = 1;
-endsnippet
 
 snippet selc "Select statement"
 SELECT COUNT(1) FROM ${1} WHERE ${0};
-endsnippet
 
 snippet wrn "Where ROWNNUM"
 WHERE ROWNUM <= 10 ${0:AND}
-endsnippet
 
 snippet arn "AND ROWNNUM"
 AND ROWNUM <= 10 ${0:;}
-endsnippet
 
 snippet ppram "Retuns param in wrapped format"
 	||`!p snip.rv = param(t[1].upper())`$1 $0
-endsnippet
 
 snippet dbo "Show output "
 	DBMS_OUTPUT.put_line('${0}');
-endsnippet
 
 snippet dbop "Show Parameter output "
 	DBMS_OUTPUT.put_line(`!p snip.rv = param(t[1].upper())`$1 $0);
-endsnippet
 
 snippet dbl "Log message in Log Table, Change procedure as defined by you"
 	DEBUG_LOG_PKG.WRITE_LOG(${1:'Test'},${2:$1} ,$0 );
-endsnippet
 
 snippet plog "Print Log output "
 	printlog(`!p snip.rv = param(t[1].upper())`$1 $0);
-endsnippet
 
 snippet dut "DBMS_OUTPUT.put_line"
 	DBMS_UTILITY.get_time;
-endsnippet
 
 snippet bc "Bulk collect into"
 	bulk collect into ${0}
-endsnippet
 
 snippet ei "Execute Immediate"
 	EXECUTE IMMEDIATE '${0:statement}' ;
-endsnippet
 
 snippet eitt "Execute Immediate TRUNCATE Table"
 	EXECUTE IMMEDIATE( 'TRUNCATE TABLE ${0:table}');
-endsnippet
 
 snippet eitp "Execute Immediate ALTER Table Truncate partition"
 	EXECUTE IMMEDIATE( 'ALTER TABLE ${1:table} TRUNCATE PARTITION ${0:partition}');
-endsnippet
 
 snippet prmpt "Prompt message"
 PROMPT ${1:Creating }...
-endsnippet
 
 snippet crseq "Create Sequence"
 DROP SEQUENCE ${1:schema}.${2:name}_s;
@@ -176,20 +155,17 @@ CREATE SEQUENCE $1.$2_s
    NOCYCLE
    NOCACHE
    NOORDER;
-endsnippet
 
 snippet crsyn "Create Synonym"
 
 CREATE OR REPLACE SYNONYM ${1:schema}.${2:name} FOR ${3:target}.${0};
 
-endsnippet
 
 snippet crind "Create Index"
 DROP INDEX $1.$4;
 
 CREATE INDEX $1.${4:$2_${5}}
 ON ${1:schema}.${2:table}(${3}) ${6:TABLESPACE ${0} };
-endsnippet
 
 ########################################
 #		 Table Operation			   #
@@ -198,7 +174,6 @@ endsnippet
 snippet drtab "Drop Table"
 DROP TABLE ${1:schema}.${2:name} CASCADE CONSTRAINTS ${3:PURGE};
 
-endsnippet
 
 snippet crtab "Create Table"
 
@@ -210,23 +185,18 @@ CREATE TABLE $1.$2
 )
 ${3:TABLESPACE ${4}}
 ;
-endsnippet
 
 snippet ccol  "Add VARCHAR2 column to table"
 	${1:,} ${2:name}	VARCHAR2(${0:100})
-endsnippet
   
 snippet dcol  "Add DATE column to table"
 	${1:,} ${0:name}	DATE
-endsnippet
   
 snippet ncol  "Add NUMBER column to table"
 	${1:,} ${0:name}	NUMBER
-endsnippet
 
 snippet at "Alter Table"
 	ALTER TABLE ${1:table} ${0}
-endsnippet
 
 
 #########################################
@@ -235,59 +205,45 @@ endsnippet
   
 snippet tr "Type record"
 	TYPE t_${1:rec} IS RECORD (${0:/* columns */} );
-endsnippet
    
 snippet tt "Type Table"
 	TYPE t_${1:tbl} IS TABLE OF ${0:table_name}%ROWTYPE INDEX BY BINARY_INTEGER;
-endsnippet
 
 snippet tc "Type Cursor"
 	TYPE t_${1:tbl} IS TABLE OF ${0:cur}%ROWTYPE INDEX BY BINARY_INTEGER;
-endsnippet
 
 snippet pn
 	p_${1}		${2:IN}		NUMBER ${3:DEFAULT ${0:NULL}}
-endsnippet
 
 snippet pd
 	p_${1}		${2:IN}		DATE ${3:DEFAULT ${0:SYSDATE}}
-endsnippet
 
 snippet pc
 	P_${1}		${2:IN}		VARCHAR2 ${3:DEFAULT ${0:NULL}}
-endsnippet
 
 snippet ln
 	l_${1}		NUMBER ${2: := ${3} };
-endsnippet
 
 snippet ld
 	l_${1}		DATE ${2: := ${3} };
-endsnippet
 
 snippet lc
 	l_${1}		VARCHAR2(${2:100}) ${3: := ${4} };
-endsnippet
 
 snippet gn
 	g_${1}		NUMBER ${2: := ${3:10} };
-endsnippet
 
 snippet gd
 	g_${1}		DATE ${2: := ${3:SYSDATE} };
-endsnippet
 
 snippet gc
 	g_${1}		VARCHAR2(${2:100}) ${3: := ${4} };
-endsnippet
 
 snippet ltbl
 	l_tbl_${1}		${0};
-endsnippet
 
 snippet lrec
 	l_rec_${1}		${0};
-endsnippet
 
 #########################################
 #		   Condition, Loops				#
@@ -296,7 +252,6 @@ snippet if "If Condition"
 	IF(${1}) THEN
 		${0};
 	END IF;
-endsnippet
 
 snippet ife "IF-Else Condition"
 	IF(${1}) THEN
@@ -304,12 +259,10 @@ snippet ife "IF-Else Condition"
 	ELSIF
 		${0};
 	END IF;
-endsnippet
 
 snippet els "Else Condition"
 	ELSIF ${1:condition} THEN
 		${0};
-endsnippet
 
 snippet case "Case statement"
 	CASE WHEN (${1}) THEN
@@ -318,31 +271,26 @@ snippet case "Case statement"
 		${4}
 	${0:ELSE}
 	END 
-endsnippet
 
 snippet while "While Loop"
 	WHILE ${1:a} ${2:condition} ${3:b}	LOOP
 		${0};
 	END LOOP;
-endsnippet
 
 snippet fori "For Loop"
 	FOR ${1:indx} in ${2:1}..${3:10}  LOOP
 		${4};
 	END LOOP;
-endsnippet
 
 snippet fort "Table For Loop"
 	FOR ${1:indx} in 1..${2:ttb}.count LOOP
 		${0};
 	END LOOP;
-endsnippet
 
 snippet loop "Loop statement"
 	LOOP
 		${0};
 	END LOOP;
-endsnippet
 
 snippet fora "For All Loop"
 	  IF ( ${1:ttbl}.COUNT > 0 ) THEN
@@ -356,14 +304,12 @@ snippet fora "For All Loop"
 			   RAISE excp_custom;
 		 END;
 	  END IF;
-endsnippet
 
 snippet forc "For Cursor Loop"
 	FOR $1_rec IN ${1:cur} ${2:(${3:param})}
 	LOOP
 		${0}
 	END LOOP; -- End $1
-endsnippet
 
 #########################################
 #		  Cursor Operations				#
@@ -373,7 +319,6 @@ snippet dcur "Cursor declaration"
 	SELECT ${0}
 		FROM $1
 		WHERE 1 = 1;
-endsnippet
 
 snippet copen "Open Cursor"
 	OPEN ${1:cursor} ${2:( ${3:param} )};
@@ -386,7 +331,6 @@ snippet copen "Open Cursor"
 		RAISE excp_custom;
 	END IF;
 	CLOSE $1;
-endsnippet
 
 snippet copenbc "Open Cursor Bulk collect"
 	OPEN ${1:cursor} ${2:( ${3:param} )};
@@ -398,7 +342,6 @@ snippet copenbc "Open Cursor Bulk collect"
 		l_errmsg := 'No records fetched in cursor : $1.';
 		RAISE excp_custom;{0}
 	END IF;
-endsnippet
 
 #########################################
 #		BEGIN/DECLARE Blocks			#
@@ -414,7 +357,6 @@ EXCEPTION --Exception Block
    WHEN OTHERS THEN
 	  dbms_output.put_line('Error while . Error : '||sqlerrm);
 END;
-endsnippet
 
 snippet begin "Begin block"
 BEGIN	   
@@ -425,7 +367,6 @@ EXCEPTION --Exception Block
    WHEN OTHERS THEN
 	  printlog('Error while . Error : '||sqlerrm);
 END;
-endsnippet
 
 snippet excp "Exception Block"
 	EXCEPTION --Exception Block
@@ -433,11 +374,9 @@ snippet excp "Exception Block"
 		WHEN OTHERS THEN
 		${1};
 	END;
-endsnippet
 
 snippet rae "Raise Application Error"
 RAISE_APPLICATION_ERROR(${1:-20000},${0:''});
-endsnippet
 
 #########################################
 #	   Procedure/Function calling		#
@@ -453,7 +392,6 @@ BEGIN
 		COMMIT;
 	END;
 END;
-endsnippet
 
 snippet whilejob "Submit DBMS Job with While Loop"
 -- Submit the job to get the output
@@ -482,7 +420,6 @@ END;
 		COMMIT;
 	END;
 END;
-endsnippet
 
   
 #########################################
@@ -502,7 +439,6 @@ snippet crprintlog "Create Printlog Procedure"
 		DBMS_OUTPUT.put_line (l_errmsg); -- Console output
 		DEBUG_LOG_PKG.WRITE_LOG(g_package_name,g_proc_name,p_message); -- Debug table
 	END printlog;
-endsnippet
 
 snippet crgeterr "Create get_errmsg function"
    -- Form the error message for when others
@@ -516,7 +452,6 @@ snippet crgeterr "Create get_errmsg function"
 		 printlog( 'Error while forming messgage. Error : ' || SQLERRM );
 		 RETURN NULL;
    END;
-endsnippet
 
 snippet crpksfunc "Create package specification function"
 ------------------------------------------------------------------------------------------------
@@ -526,7 +461,6 @@ snippet crpksfunc "Create package specification function"
 ------------------------------------------------------------------------------------------------
 FUNCTION ${1:func} ${2:(${3:params})} 
 	  RETURN ${0};
-endsnippet
 
 snippet crpksproc "Create package specification procedure"
 ------------------------------------------------------------------------------------------------
@@ -535,7 +469,6 @@ snippet crpksproc "Create package specification procedure"
 `!p snip.rv=hdr_params(t[3],0) `
 ------------------------------------------------------------------------------------------------
 PROCEDURE ${1:proc} ${2:(${3:params})} ;
-endsnippet
 
 snippet crpkbfunc "Create package body function"
 	------------------------------------------------------------------------------------------------
@@ -560,7 +493,6 @@ snippet crpkbfunc "Create package body function"
 	  THEN
 		 RETURN NULL;
    END $1;
-endsnippet
 
 snippet crpkbproc "Create package body procedure"
 
@@ -592,7 +524,6 @@ EXCEPTION -- Exception block of Procedure
 	  printlog( l_errmsg );
 END $1;
 
-endsnippet
 
 snippet crpks "Create Package specification"
 CREATE OR REPLACE PACKAGE ${1}.${2}
@@ -622,7 +553,6 @@ END $2;
 
 SHOW ERROR
 /
-endsnippet
 
 snippet crpkb  "Create package body"
 CREATE OR REPLACE PACKAGE BODY ${1}.${2}
@@ -685,7 +615,6 @@ END $2;
 SHOW ERROR
 /
 
-endsnippet
 
 snippet crproc "Create procedure"
 
@@ -729,5 +658,4 @@ EXCEPTION -- Exception block of Procedure
 	  DEBUG_LOG_PKG.WRITE_LOG(g_proc_name,g_proc_name ,l_errmsg );
 END $2;
 
-endsnippet
 

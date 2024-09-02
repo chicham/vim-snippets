@@ -4,18 +4,14 @@ priority -50
 # and parsed correctly
 snippet usnip "Ultisnips snippet definition" b
 `!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:b}
-${0:${VISUAL}}
-`!p snip.rv = "endsnippet"`
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet global "Global snippet" b
 `!p snip.rv = "global"` !p
-${0:${VISUAL}}
+${0:$TM_SELECTED_TEXT}
 `!p snip.rv = "endglobal"`
-endsnippet
 
-snippet vis "${VISUAL}" i
+snippet vis "$TM_SELECTED_TEXT" i
 \$\{VISUAL${1:${2:default}${3:/transform/}}\}
-endsnippet
 
 # vim:ft=snippets:

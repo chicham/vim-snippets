@@ -44,7 +44,7 @@ snippet dmo \DeclareMathOperator
 # \begin{}...\end{}
 snippet begin \begin{} ... \end{} block
 	\\begin{${1:env}}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{$1}
 
 # Maketitle
@@ -54,52 +54,52 @@ snippet mkt maketitle
 # Tabular
 snippet tab tabular (or arbitrary) environment
 	\\begin{${1:tabular}}{${2:c}}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{$1}
 snippet thm thm (or arbitrary) environment with optional argument
 	\\begin[${1:author}]{${2:thm}}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{$2}
 snippet center center environment
 	\\begin{center}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{center}
 # Align(ed)
 snippet ali align(ed) environment
 	\\begin{align${1:ed}}
 		\\label{eq:${2}}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{align$1}
 # Gather(ed)
 snippet gat gather(ed) environment
 	\\begin{gather${1:ed}}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{gather$1}
 # Equation
 snippet eq equation environment
 	\\begin{equation}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{equation}
 # Equation
 snippet eql Labeled equation environment
 	\\begin{equation}
 		\\label{eq:${2}}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{equation}
 # Equation
 snippet eq* unnumbered equation environment
 	\\begin{equation*}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{equation*}
 # Unnumbered Equation
 snippet \ unnumbered equation: \[ ... \]
 	\\[
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\]
 # Equation array
 snippet eqnarray eqnarray environment
 	\\begin{eqnarray}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{eqnarray}
 # Label
 snippet lab \label
@@ -123,7 +123,7 @@ snippet item itemize environment
 		\\item ${0}
 	\\end{itemize}
 snippet it \item
-	\\item ${1:${VISUAL}}
+	\\item ${1:$TM_SELECTED_TEXT}
 # Description
 snippet desc description environment
 	\\begin{description}
@@ -136,18 +136,18 @@ snippet ]i \item (recursive)
 # Matrix
 snippet mat smart matrix environment
 	\\begin{${1:p/b/v/V/B/small}matrix}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{$1matrix}
 # Cases
 snippet cas cases environment
 	\\begin{cases}
 		${1:equation}, &\\text{ if }${2:case}\\
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{cases}
 # Split
 snippet spl split environment
 	\\begin{split}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{split}
 # Part
 snippet part document \part
@@ -334,21 +334,21 @@ snippet frame frame environment
 	\\begin{frame}[${1:t}]
 		\frametitle{${2:title}}
 		\framesubtitle{${3:subtitle}}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{frame}
 snippet block block environment
 	\\begin{block}{${1:title}}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{block}
 snippet alert alert text
 	\\alert{${1:${VISUAL:text}}} ${0}
 snippet alertblock alertblock environment
 	\\begin{alertblock}{${1:title}}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{alertblock}
 snippet example exampleblock environment
 	\\begin{exampleblock}{${1:title}}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{exampleblock}
 snippet col2 two-column environment
 	\\begin{columns}
@@ -369,21 +369,21 @@ snippet \{ \{ \}
 	\\{ ${0} \\}
 #delimiter
 snippet lr left right
-	\\left${1} ${0:${VISUAL}} \\right$1
+	\\left${1} ${0:$TM_SELECTED_TEXT} \\right$1
 snippet lr( left( right)
-	\\left( ${0:${VISUAL}} \\right)
+	\\left( ${0:$TM_SELECTED_TEXT} \\right)
 snippet lr| left| right|
-	\\left| ${0:${VISUAL}} \\right|
+	\\left| ${0:$TM_SELECTED_TEXT} \\right|
 snippet lr{ left\{ right\}
-	\\left\\{ ${0:${VISUAL}} \\right\\}
+	\\left\\{ ${0:$TM_SELECTED_TEXT} \\right\\}
 snippet lr[ left[ right]
-	\\left[ ${0:${VISUAL}} \\right]
+	\\left[ ${0:$TM_SELECTED_TEXT} \\right]
 snippet lra langle rangle
-	\\langle ${0:${VISUAL}} \\rangle
+	\\langle ${0:$TM_SELECTED_TEXT} \\rangle
 # Code listings
 snippet lst
 	\\begin{listing}[language=${1:language}]
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	\\end{listing}
 snippet lsi
 	\\lstinline|${1}| ${0}

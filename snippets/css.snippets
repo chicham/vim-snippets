@@ -1,6 +1,6 @@
 snippet . "selector { }"
 	${1} {
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	}${0}
 snippet ! "!important"
 	 !important
@@ -33,7 +33,7 @@ snippet @i
 	@import url(${1});${0}
 snippet @m "@media mediatype { }"
 	@media ${1:print} {
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	}${0}
 snippet ac
 	align-content: ${1:stretch};
@@ -1246,18 +1246,18 @@ snippet ::a
 snippet ::b
 	::before
 snippet var
-	var(${0:${VISUAL}});
+	var(${0:$TM_SELECTED_TEXT});
 snippet vard
-	var(${0}, ${1:${VISUAL});
+	var(${0}, ${1:$TM_SELECTED_TEXT);
 snippet host 
 	:host {
-		${1:${VISUAL}}
+		${1:$TM_SELECTED_TEXT}
 	}
 snippet host(
 	:host(${1}) {
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	}
 snippet part {
 	::part(${1})
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	}

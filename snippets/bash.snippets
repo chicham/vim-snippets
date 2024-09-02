@@ -10,16 +10,16 @@ snippet s#!
 
 snippet if
 	if [[ $1 ]]; then
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	fi
 snippet elif
 	elif [[ $1 ]]; then
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 snippet wh
 	while [[ $1 ]]; do
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	done
 snippet until
 	until [[ $1 ]]; do
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	done

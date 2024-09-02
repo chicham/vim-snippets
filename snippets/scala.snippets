@@ -7,30 +7,30 @@
 #if
 snippet if
 	if (${1})
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 #if not
 snippet ifn
 	if (!${1})
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 #if-else
 snippet ife
 	if (${1})
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	else
 		${0}
 #if-else-if
 snippet ifelif
 	if (${1})
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	else if (${3})
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 snippet eif
 	else if (${3})
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 #while loop
 snippet wh
 	while (${1:obj}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 #for loop(classic)
 snippet for
@@ -50,7 +50,7 @@ snippet fory
 #exceptions
 snippet try
 	try {
-		${1:${VISUAL}}
+		${1:$TM_SELECTED_TEXT}
 	} catch {
 		case e: FileNotFoundException => ${2}
 		case e: IOException => ${3}
@@ -59,7 +59,7 @@ snippet try
 	}
 #match
 snippet mat
-	${1:${VISUAL}} match {
+	${1:$TM_SELECTED_TEXT} match {
 		case ${2} => ${0}
 	}
 snippet match
@@ -69,7 +69,7 @@ snippet match
 	}
 #case
 snippet case
-	case ${1:${VISUAL}} => ${0}
+	case ${1:$TM_SELECTED_TEXT} => ${0}
 ############################
 # methods and arguments
 #

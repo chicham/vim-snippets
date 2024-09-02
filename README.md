@@ -144,7 +144,7 @@ instead use:
 
 ```
 if (${1}){
-  ${0:${VISUAL}}
+  ${0:$TM_SELECTED_TEXT}
 }
 ```
 
@@ -154,7 +154,7 @@ get vim-dev plugin which has function completion
 
 Thus for conditions (while, if ..) and block bodies just use ${N} - Thanks
 
-When the snippet can be used to wrap existing code leverage `${VISUAL}`
+When the snippet can be used to wrap existing code leverage `$TM_SELECTED_TEXT`
 
 Open questions:
 What about one line if ee then .. else .. vs if \n .. then \n ... \n else \n .. ?

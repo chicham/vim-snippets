@@ -53,7 +53,7 @@ snippet pln, "println! with format param"
 snippet fmt "format!"
 	format!("${1}{${2}}", ${3});
 snippet d "dbg! debugging macro"
-	dbg!(${0:${VISUAL}})
+	dbg!(${0:$TM_SELECTED_TEXT})
 snippet d; "dbg! debugging macro statement"
 	dbg!(&${1});
 	${0}
@@ -114,25 +114,25 @@ snippet res "Result<T, E>"
 # Control structures
 snippet if
 	if ${1} {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet ife "if / else"
 	if ${1} {
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	} else {
 		${0}
 	}
 snippet ifl "if let (...)"
 	if let ${1:Some($2)} = $3 {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet el "else"
 	else {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet eli "else if"
 	else if ${1} {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet mat "match pattern"
 	match ${1} {
@@ -144,15 +144,15 @@ snippet = "=> "
 	=> $0
 snippet loop "loop {}" b
 	loop {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet wh "while loop"
 	while $1 {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet whl "while let (...)"
 	while let ${1:Some($2)} = $3 {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet for "for ... in ... loop"
 	for ${1:i} in ${2} {
@@ -243,9 +243,9 @@ snippet macro "macro_rules!" b
 		)
 	}
 snippet boxp "Box::new()"
-	Box::new(${0:${VISUAL}})
+	Box::new(${0:$TM_SELECTED_TEXT})
 snippet rc "Rc::new()"
-	Rc::new(${0:${VISUAL}})
+	Rc::new(${0:$TM_SELECTED_TEXT})
 snippet unim "unimplemented!()"
 	unimplemented!()
 snippet use "use ...;" b

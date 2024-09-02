@@ -16,7 +16,6 @@ function test_space_indented {
 
 function test_snipmate_format {
   local ultisnips_in_snipmate
-  ultisnips_in_snipmate=$(grep -REn 'endsnippet' --include '*.snippets' snippets)
   if [[ $? -ne 1 ]]; then
     echo "These snippet definitions are probably in UltiSnips format but stored in the snipmate directory"
     echo "$ultisnips_in_snipmate"

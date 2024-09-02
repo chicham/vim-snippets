@@ -32,7 +32,6 @@ class ${1:`!v expand('%:t:r')`} extends ${2:BaseController} {
     public function destroy($id) {
     }
 }
-endsnippet
 
 #service service provider
 snippet l_ssp "Laravel service provider for service" b
@@ -60,7 +59,6 @@ class ${2:`!v expand('%:t:r')`} extends ServiceProvider {
         });
     }
 }
-endsnippet
 
 #repository service provider
 snippet l_rsp "Laravel service provider for repository" b
@@ -100,7 +98,6 @@ class ${3:`!v expand('%:t:r')`} extends ServiceProvider {
         return ['$2\\$1Interface'];
     }
 }
-endsnippet
 
 #model
 snippet l_md "Laravel simple model" b
@@ -125,7 +122,6 @@ class ${2:`!v expand('%:t:r')`} extends \Eloquent {
 
     protected $guarded = [${7:'id'}];
 }
-endsnippet
 
 #abstract repository
 snippet l_ar "Laravel abstract Repository" b
@@ -193,7 +189,6 @@ abstract class ${2:`!v expand('%:t:r')`} implements ${3:BaseRepositoryInterface}
         return $this->model->find($id, $columns);
     }
 }
-endsnippet
 
 #repository
 snippet l_r "Laravel Repository" b
@@ -213,7 +208,6 @@ namespace ${1:Repositories\\$2};
 class ${3:`!v expand('%:t:r')`} extends \\$6 implements ${4:$3RepositoryInterface} {
     $7
 }
-endsnippet
 
 #service
 snippet l_s "Laravel Service" b
@@ -241,7 +235,6 @@ class ${2:`!v expand('%:t:r')`} {
         $this->$5 = $repo;
     }
 }
-endsnippet
 
 #facade
 snippet l_f "Laravel Facade" b
@@ -267,4 +260,3 @@ class ${2:`!v expand('%:t:r')`} extends Facade {
      */
     protected static function getFacadeAccessor() { return '${4:$3Service}'; }
 }
-endsnippet

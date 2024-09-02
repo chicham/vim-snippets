@@ -9,71 +9,59 @@ endglobal
 
 snippet status "Status" bA
 status $1`!p snip.rv = complete(t[1], ['build', 'ci', 'test', 'refactor', 'perf', 'improvement', 'docs', 'chore', 'feat', 'fix'])`
-endsnippet
 
 snippet fix "fix conventional commit"
 fix(${1:scope}): ${2:title}
 
-${0:${VISUAL}}
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet feat "feat conventional commit"
 feat(${1:scope}): ${2:title}
 
-${0:${VISUAL}}
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet chore "chore conventional commit"
 chore(${1:scope}): ${2:title}
 
-${0:${VISUAL}}
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet docs "docs conventional commit"
 docs(${1:scope}): ${2:title}
 
-${0:${VISUAL}}
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet improvement "improvement conventional commit"
 improvement(${1:scope}): ${2:title}
 
-${0:${VISUAL}}
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet perf "perf conventional commit"
 perf(${1:scope}): ${2:title}
 
-${0:${VISUAL}}
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet refactor "refactor conventional commit"
 refactor(${1:scope}): ${2:title}
 
-${0:${VISUAL}}
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet test "test conventional commit"
 test(${1:scope}): ${2:title}
 
-${0:${VISUAL}}
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet ci "ci conventional commit"
 ci(${1:scope}): ${2:title}
 
-${0:${VISUAL}}
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet build "build conventional commit"
 build(${1:scope}): ${2:title}
 
-${0:${VISUAL}}
-endsnippet
+${0:$TM_SELECTED_TEXT}
 
 snippet Co-authored-by "Co-authored-by:"
 Co-authored-by: ${1:Author Name} <${2:Email}>
-endsnippet
 
 snippet sign "Signature"
 -------------------------------------------------------------------------------
@@ -90,12 +78,10 @@ ${7:Mail: 					Email}
 ${8:Web: 						https://}
 -------------------------------------------------------------------------------
 $0
-endsnippet
 
 snippet t "Todo"
 TODO: ${1:What is it} (`date "+%b %d %Y %a (%H:%M:%S)"`, `echo $USER`)
 $0
-endsnippet
 
 snippet cmt "Commit Structure" bA
 ${1:Summarize changes in around 50 characters or less}
@@ -131,4 +117,3 @@ ${8:Resolves: #123
 See also: #456, #789}
 
 ${9:Signature}
-endsnippet

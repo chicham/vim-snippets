@@ -11,7 +11,6 @@ snippet docf "function documentation" b
 #' @examples
 #'
 #' ${10: function call examples}
-endsnippet
 
 snippet doct "type definition" b
 #' @description
@@ -23,21 +22,16 @@ snippet doct "type definition" b
 #' @examples
 #'
 #' ${10: constructor examples}
-endsnippet
 
 snippet par "function parameter documentation" b
 #' @param ${1:name}::${2:Type} ${0:Description}
-endsnippet
 
 snippet fld "type field documentation" b
 #' @field ${1:name}::${2:Type} ${0:Description}
-endsnippet
 
 # Debugging
 snippet deb "Debugger breakpoint" b
 Main.@bp
-endsnippet
 
 snippet inf "Infiltrator breakpoint" b
 Main.@infiltrate
-endsnippet

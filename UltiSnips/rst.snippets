@@ -112,7 +112,6 @@ ${1:${VISUAL:Part name}}
 `!p snip.rv = display_width(t[1])*'#'`
 
 $0
-endsnippet
 
 snippet chap "Chapter" b
 `!p snip.rv = display_width(t[1])*'*'`
@@ -120,35 +119,30 @@ ${1:${VISUAL:Chapter name}}
 `!p snip.rv = display_width(t[1])*'*'`
 
 $0
-endsnippet
 
 snippet sec "Section" b
 ${1:${VISUAL:Section name}}
 `!p snip.rv = display_width(t[1])*'='`
 
 $0
-endsnippet
 
 snippet ssec "Subsection" b
 ${1:${VISUAL:Subsection name}}
 `!p snip.rv = display_width(t[1])*'-'`
 
 $0
-endsnippet
 
 snippet sssec "Subsubsection" b
 ${1:${VISUAL:Subsubsection name}}
 `!p snip.rv = display_width(t[1])*'^'`
 
 $0
-endsnippet
 
 snippet para "Paragraph" b
 ${1:${VISUAL:Paragraph name}}
 `!p snip.rv = display_width(t[1])*'"'`
 
 $0
-endsnippet
 
 snippet em "Emphasize string" i
 `!p
@@ -160,7 +154,6 @@ if has_cjk(vim.current.line):
 else:
 	snip.rv = " "
 `$0
-endsnippet
 
 snippet st "Strong string" i
 `!p
@@ -171,7 +164,6 @@ if has_cjk(vim.current.line):
 else:
 	snip.rv = " "
 `$0
-endsnippet
 
 snippet "li(st)? (?P<num>\d+)" "List" br
 $0
@@ -180,7 +172,6 @@ $0
 # which will extand into a unordered list contains 4 items
 snip.rv = make_items(match.groupdict()['num'])
 `
-endsnippet
 
 snippet "ol(st)? (?P<num>\d+)" "Order List" br
 $0
@@ -189,7 +180,6 @@ $0
 # which will extand into a ordered list contains 4 items
 snip.rv = make_items(match.groupdict()['num'], 1)
 `
-endsnippet
 ###########################################################################
 #						  More Specialized Stuff.						  #
 ###########################################################################
@@ -199,7 +189,6 @@ snippet cb "Code Block" b
 	${2:${VISUAL:code}}
 
 $0
-endsnippet
 
 # match snippets :
 # img, inc, fig
@@ -232,26 +221,22 @@ if not check_file_exist(path, t[2]):
 else:
 	snip.rv=""
 `$0
-endsnippet
 
 snippet di "Directives" b
 .. $1`!p snip.rv=complete(t[1], DIRECTIVES)`:: $2
 
 	${3:${VISUAL:Content}}
 $0
-endsnippet
 
 snippet dt "Directives without title" b
 .. $1`!p snip.rv=complete(t[1], DIRECTIVES_WITHOUT_TITLE)`::
 
 	${2:${VISUAL:Content}}
 $0
-endsnippet
 
 snippet ds "Directives for subscription" b
 .. |$1| $2`!p snip.rv=complete(t[2], DIRECTIVES_FOR_SUBSTITUTION)`:: ${3:Content}
 $0
-endsnippet
 
 snippet sa "Specific Admonitions" b
 .. $1`!p snip.rv =complete(t[1], SPECIFIC_ADMONITIONS)`:: $2
@@ -259,14 +244,12 @@ snippet sa "Specific Admonitions" b
 	${3:${VISUAL:Content}}
 
 $0
-endsnippet
 
 # it will be trigger at start of line or after a word
 snippet ro "Text Roles" w
 \ :$1`!p snip.rv=complete(t[1],
 							   TEXT_ROLES+look_up_directives(TEXT_ROLES_REGEX,
 														path))`:\`$2\`\
-endsnippet
 
 snippet eu "Embedded URI" i
 `!p
@@ -277,13 +260,11 @@ if has_cjk(vim.current.line):
 else:
 	snip.rv = ""
 `$0
-endsnippet
 
 snippet fnt "Footnote or Citation" i
 [${1:Label}]_ $0
 
 .. [$1] ${2:Reference}
-endsnippet
 
 # Only for Nikola — Static Site Generator
 snippet chart "Pygal chart for Nikola" b
@@ -296,7 +277,6 @@ snippet chart "Pygal chart for Nikola" b
 	'IE',      [85.8, 84.6, 84.7, 74.5, 66, 58.6]
 	'Others',  [14.2, 15.4, 15.3, 8.9, 9, 10.4]
 $0
-endsnippet
 
 ############
 #  Sphinx  #
@@ -306,6 +286,5 @@ snippet sid "SideBar" b
 .. sidebar:: ${1:SideBar Title}
 
 	${2:${VISUAL:SideBar Content}}
-endsnippet
 
 # vim:set list noet sts=0 sw=4 ts=4:

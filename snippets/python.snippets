@@ -29,7 +29,7 @@ snippet sk "skip unittests" b
 
 snippet wh
 	while $1:
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 
 # dowh - does the same as do...while in other languages
 snippet dowh
@@ -40,11 +40,11 @@ snippet dowh
 
 snippet with
 	with ${1:expr} as ${2:var}:
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 
 snippet awith
 	async with ${1:expr} as ${2:var}:
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 
 # New Class
 snippet cl
@@ -116,13 +116,13 @@ snippet property
 # Ifs
 snippet if
 	if $1:
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 snippet el
 	else:
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 snippet ei
 	elif $1:
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 
 # Match
 snippet match Structural pattern matching
@@ -166,26 +166,26 @@ snippet sa self.attribute = attribute
 
 snippet try Try/Except
 	try:
-		${1:${VISUAL}}
+		${1:$TM_SELECTED_TEXT}
 	except ${2:Exception} as ${3:e}:
 		${0:raise $3}
 snippet trye Try/Except/Else
 	try:
-		${1:${VISUAL}}
+		${1:$TM_SELECTED_TEXT}
 	except ${2:Exception} as ${3:e}:
 		${4:raise $3}
 	else:
 		${0}
 snippet tryf Try/Except/Finally
 	try:
-		${1:${VISUAL}}
+		${1:$TM_SELECTED_TEXT}
 	except ${2:Exception} as ${3:e}:
 		${4:raise $3}
 	finally:
 		${0}
 snippet tryef Try/Except/Else/Finally
 	try:
-		${1:${VISUAL}}
+		${1:$TM_SELECTED_TEXT}
 	except ${2:Exception} as ${3:e}:
 		${4:raise $3}
 	else:
@@ -338,13 +338,13 @@ snippet akw
 
 # comprehensions
 snippet lcp list comprehension
-	[${1} for ${2} in ${3:${VISUAL}}]${0}
+	[${1} for ${2} in ${3:$TM_SELECTED_TEXT}]${0}
 
 snippet dcp dict comprehension
-	{${1}: ${2} for ${3} in ${4:${VISUAL}}}${0}
+	{${1}: ${2} for ${3} in ${4:$TM_SELECTED_TEXT}}${0}
 
 snippet scp set comprehension
-	{${1} for ${2} in ${3:${VISUAL}}}${0}
+	{${1} for ${2} in ${3:$TM_SELECTED_TEXT}}${0}
 
 snippet contain "methods for emulating a container type" b
 	def __len__(self):

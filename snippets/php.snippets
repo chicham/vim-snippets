@@ -1,7 +1,7 @@
 snippet <?
 	<?php
 
-	${0:${VISUAL}}
+	${0:$TM_SELECTED_TEXT}
 snippet dst "declare(strict_types=1)"
 	declare(strict_types=${1:1});
 snippet ec
@@ -17,38 +17,38 @@ snippet ?
 	<?php ${0} ?>
 snippet ?f
 	<?php foreach ($${1:vars} as $${2:$var}): ?>
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	<?php endforeach ?>
 snippet ?i
 	<?php if ($${1:var}): ?>
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	<?php endif ?>
 snippet ns
 	namespace ${1:Foo\Bar\Baz};
 	
-	${0:${VISUAL}}
+	${0:$TM_SELECTED_TEXT}
 snippet c
 	class ${1:`vim_snippets#Filename()`}
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet i
 	interface ${1:`vim_snippets#Filename()`}
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet t.
 	\$this->
 snippet f
 	function ${1}(${3})
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 # method
 snippet m
 	${1:protected} function ${2:foo}()
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet sm "PHP Class Setter"
 	/**
@@ -165,7 +165,7 @@ snippet doc_c
 	 */
 	${1:}class ${2:}
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	} // END $1class $2
 # Constant Definition - post doc
 snippet doc_dp
@@ -239,7 +239,7 @@ snippet interface
 	 */
 	interface ${1:`vim_snippets#Filename()`}
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 # Trait
 snippet trait
@@ -251,7 +251,7 @@ snippet trait
 	 */
 	trait ${1:`vim_snippets#Filename()`}
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 # class ...
 snippet class
@@ -274,7 +274,7 @@ snippet nc
 
 	${2:abstract }class ${3:`vim_snippets#Filename()`}
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 # define(...)
 snippet def "define('VARIABLE_NAME', 'definition')"
@@ -284,43 +284,43 @@ snippet def?
 	${1}defined('${2}')
 snippet wh "while (condition) { ... }"
 	while ($1) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet do "do { ... } while (condition)"
 	do {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	} while (${1});
 snippet if "if (condition) { ... }"
 	if (${1}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet ifn "if (!condition) { ... }"
 	if (!${1}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet ifil "<?php if (condition): ?> ... <?php endif; ?>"
 	<?php if (${1}): ?>
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	<?php endif; ?>
 snippet ife "if (cond) { ... } else { ... }"
 	if (${1}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	} else {
 		${2}
 	}
 snippet ifeil "<?php if (condition): ?> ... <?php else: ?> ... <?php endif; ?>"
 	<?php if (${1}): ?>
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	<?php else: ?>
 		${2}
 	<?php endif; ?>
 snippet el "else { ... }"
 	else {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet eif "elseif(condition) { ... }"
 	elseif (${1}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet switch "switch($var) { case 'xyz': ... default: .... }"
 	switch ($${1:variable}) {
@@ -334,23 +334,23 @@ snippet switch "switch($var) { case 'xyz': ... default: .... }"
 	}
 snippet case "case 'value': ... break"
 	case '${1:value}':
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 		break;
 snippet for "for ($i = 0; $i < $count; $i++) { ... }"
 	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet foreach "foreach ($var as $value) { .. }"
 	foreach ($${1:variable} as $${2:value}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet foreachil "<?php foreach ($var as $value): ?>  ... <?php endforeach; ?>"
 	<?php foreach ($${1:variable} as $${2:value}): ?>
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	<?php endforeach; ?>
 snippet foreachk "foreach ($var as $key => $value) { .. }"
 	foreach ($${1:variable} as $${2:key} => $${3:value}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet foreachkil "<?php foreach ($var as $key => $value): ?>  ... <?php endforeach; ?>"
 	<?php foreach ($${1:variable} as $${2:key} => $${3:value}): ?>
@@ -360,7 +360,7 @@ snippet array "$... = ['' => ]"
 	$${1:arrayName} = ['${2}' => ${3}];
 snippet try "try { ... } catch (Exception $e) { ... }"
 	try {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	} catch (${1:Exception} $e) {
 	}
 # lambda with closure
@@ -638,17 +638,17 @@ snippet asnnu "$this->assertNotNull($a)"
 snippet test "public function testXYZ() { ... }"
 	public function test${1}()
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet setup "protected function setUp() { ... }"
 	protected function setUp()
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet teardown "protected function tearDown() { ... }"
 	protected function tearDown()
 	{
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet proph "$observer = $this->prophesize(SomeClass::class);"
 	$${1:observer} = $this->prophesize(${2:SomeClass}::class);

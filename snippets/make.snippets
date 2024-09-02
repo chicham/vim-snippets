@@ -27,19 +27,19 @@ snippet print
 # ifeq
 snippet if
 	ifeq (${1:cond0}, ${2:cond1})
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	endif
 # ifeq ... else ... endif
 snippet ife
 	ifeq (${1:cond0}, ${2:cond1})
-		${3:${VISUAL}}
+		${3:$TM_SELECTED_TEXT}
 	else
 		${0}
 	endif
 # else ...
 snippet el
 	else
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 # .DEFAULT_GOAL := target
 snippet default
 	.DEFAULT_GOAL := ${1}

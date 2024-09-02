@@ -14,25 +14,25 @@ snippet for
 	<% end %>
 snippet if
 	<%= if ${1} do %>
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	<% end %>
 snippet ife
 	<%= if ${1} do %>
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	<% else %>
 		${0}
 	<% end %>
 snippet cond
 	<%= cond do %>
 		<% ${1} -> %>
-			${2:${VISUAL}}
+			${2:$TM_SELECTED_TEXT}
 
 		<% true -> %>
 			${0}
 	<% end %>
 snippet unless
 	<%= unless ${1} do %>
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	<% end %>
 snippet ft form_tag
 	<%= form_tag(${1:"/users"}, method: ${2::post}) %>

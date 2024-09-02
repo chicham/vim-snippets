@@ -96,7 +96,7 @@ snippet interface
 	}
 snippet try
 	try {
-		${1:${VISUAL}}
+		${1:$TM_SELECTED_TEXT}
 	} catch (error:ErrorType) {
 		${2}
 	} finally {
@@ -115,11 +115,11 @@ snippet forr
 # If Condition
 snippet if
 	if ($1) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet el
 	else {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 # Ternary conditional
 snippet t Ternary: `condition ? true : false`

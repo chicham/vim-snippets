@@ -49,23 +49,19 @@ snippet class "Class declaration" b
 class ${1:`!p snip.rv = get_module_namespace_and_basename()`} {
 	${0:# body}
 }
-endsnippet
 
 snippet define "Definition" b
 define ${1:`!p snip.rv = get_module_namespace_and_basename()`} {
 	${0:# body}
 }
-endsnippet
 
 snippet type "Data type alias" b
 type ${1:`!p snip.rv = get_module_namespace_and_basename()`} = ${2:Type}
-endsnippet
 
 snippet lambda "Lambda function chain-called on a variable"
 $${1:varname}.${2:each} |${3:Type} $${4:param}| {
 	$0
 }
-endsnippet
 
 #################################################################
 #  Puppet Types                                                 #
@@ -79,35 +75,30 @@ cron { '${1:name}':
 	minute  => ${3:minute},
 	hour    => ${4:hour},
 }
-endsnippet
 
 snippet exec "Exec resource type" b
 exec { '${1:command}':
 	command => "${2:$1}",
 	user    => "${3:root}",
 }
-endsnippet
 
 snippet file "File resource type" b
 file { '${1:name}':
 	source => "puppet://${2:path}",
 	mode   => ${3:mode},
 }
-endsnippet
 
 snippet File "Defaults for file" b
 File {
 	owner => ${1:username},
 	group => ${2:groupname},
 }
-endsnippet
 
 snippet group "Group resource type" b
 group { '${1:groupname}':
 	ensure => ${3:present},
 	gid    => ${2:gid},
 }
-endsnippet
 
 snippet mount "Mount resource type" b
 mount { '${1:path}':
@@ -116,13 +107,11 @@ mount { '${1:path}':
 	ensure  => mounted,
 	options => 'rw,errors=remount-ro',
 }
-endsnippet
 
 snippet package "Package resource type" b
 package { '${1:name}':
 	ensure => ${2:installed},
 }
-endsnippet
 
 snippet user "user resource type" b
 user { '${1:username}':
@@ -134,7 +123,6 @@ user { '${1:username}':
 	managehome => false,
 	require    => Group['${7:group'}],
 }
-endsnippet
 
 snippet service "Service resource type" b
 service { '${1:name}':
@@ -142,7 +130,6 @@ service { '${1:name}':
 	enable    => true,
 	ensure    => running,
 }
-endsnippet
 
 ########################################################################
 #  Puppet Functions                                                    #
@@ -151,110 +138,83 @@ endsnippet
 
 snippet alert "Alert Function" b
 alert("${1:message}")$0
-endsnippet
 
 snippet crit "Crit Function" b
 crit("${1:message}")$0
-endsnippet
 
 snippet debug "Debug Function" b
 debug("${1:message}")$0
-endsnippet
 
 snippet defined "Defined Function" b
 defined(${1:Resource}["${2:name}"])$0
-endsnippet
 
 snippet emerg "Emerg Function" b
 emerg("${1:message}")$0
-endsnippet
 
 snippet extlookup "Simple Extlookup" b
 $${1:Variable} = extlookup("${2:Lookup}")$0
-endsnippet
 
 snippet extlookup "Extlookup with defaults" b
 $${1:Variable} = extlookup("${2:Lookup}", ${3:Default})$0
-endsnippet
 
 snippet extlookup "Extlookup with defaults and custom data file" b
 $${1:Variable} = extlookup("${2:Lookup}", ${3:Default}, ${4:Data Source})$0
-endsnippet
 
 snippet fail "Fail Function" b
 fail("${1:message}")$0
-endsnippet
 
 snippet hiera "Hiera Function" b
 $${1:Variable} = hiera("${2:Lookup}")$0
-endsnippet
 
 snippet hiera "Hiera with defaults" b
 $${1:Variable} = hiera("${2:Lookup}", ${3:Default})$0
-endsnippet
 
 snippet hiera "Hiera with defaults and override" b
 $${1:Variable} = hiera("${2:Lookup}", ${3:Default}, ${4:Override})$0
-endsnippet
 
 snippet hiera_hash "Hiera Hash Function" b
 $${1:Variable} = hiera_hash("${2:Lookup}")$0
-endsnippet
 
 snippet hiera_hash "Hiera Hash with defaults" b
 $${1:Variable} = hiera_hash("${2:Lookup}", ${3:Default})$0
-endsnippet
 
 snippet hiera_hash "Hiera Hash with defaults and override" b
 $${1:Variable} = hiera_hash("${2:Lookup}", ${3:Default}, ${4:Override})$0
-endsnippet
 
 snippet hiera_include "Hiera Include Function" b
 hiera_include("${1:Lookup}")$0
-endsnippet
 
 snippet lookup "Lookup data from hiera"
 $${1:varname} = lookup('${2:hiera::key}')$0
-endsnippet
 
 snippet trocla "Lookup or generate sensitive information"
 trocla('${1:lookup_key}', '${2:plain}', ${3:'length: 32'})$0
-endsnippet
 
 snippet include "Include Function" b
 include ${1:classname}$0
-endsnippet
 
 snippet info "Info Function" b
 info("${1:message}")$0
-endsnippet
 
 snippet inline_template "Inline Template Function" b
 inline_template("<%= ${1:template} %>")$0
-endsnippet
 
 snippet notice "Notice Function" b
 notice("${1:message}")$0
-endsnippet
 
 snippet realize "Realize Function" b
 realize(${1:Resource}["${2:name}"])$0
-endsnippet
 
 snippet regsubst "Regsubst Function" b
 regsubst($${1:Target}, '${2:regexp}', '${3:replacement}')$0
-endsnippet
 
 snippet split "Split Function" b
 $${1:Variable} = split($${1:Target}, '${2:regexp}')$0
-endsnippet
 
 snippet versioncmp "Version Compare Function" b
 $${1:Variable} = versioncmp('${1:version}', '${2:version}')$0
-endsnippet
 
 snippet warning "Warning Function" b
 warning("${1:message}")$0
-endsnippet
 
 # vim:ft=snippets:

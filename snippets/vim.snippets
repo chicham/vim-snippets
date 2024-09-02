@@ -14,13 +14,13 @@ snippet f function
 	endf
 snippet t try ... catch statement
 	try
-		${1:${VISUAL}}
+		${1:$TM_SELECTED_TEXT}
 	catch ${2}
 		${0}
 	endtry
 snippet for for ... in loop
 	for ${1} in ${2}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	endfor
 snippet forkv for [key, value] in loop
 	for [${1},${2}] in items(${3})
@@ -29,15 +29,15 @@ snippet forkv for [key, value] in loop
 	endfor
 snippet wh while loop
 	while ${1}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	endw
 snippet if if statement
 	if ${1}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	endif
 snippet ife if ... else statement
 	if ${1}
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	else
 		${0}
 	endif
@@ -49,7 +49,7 @@ snippet au augroup ... autocmd block
 snippet auv augroupvisual ... autocmd block with visual placeholder
 	augroup ${1:AU_NAME}
 		autocmd!
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	augroup END
 snippet bun Vundle.vim Plugin definition
 	Plugin '${0}'

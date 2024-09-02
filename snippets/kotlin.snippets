@@ -14,28 +14,28 @@ snippet main
 snippet ret
 	return ${0}
 snippet whe
-	when (${1:${VISUAL}}) {
+	when (${1:$TM_SELECTED_TEXT}) {
 		${2} -> ${3}
 	}
 snippet cla
 	class ${1} {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet cobj
 	companion object {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet obj
 	object ${1} {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet if
 	if (${1}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet ife
 	if (${1}) {
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	} else {
 		${0}
 	}

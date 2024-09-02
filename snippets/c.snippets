@@ -35,7 +35,7 @@ snippet ifdef
 # if
 snippet #if
 	#if ${1:FOO}
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	#endif
 # header include guard
 snippet once
@@ -62,23 +62,23 @@ snippet nocxx
 # if
 snippet if
 	if (${1:true}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet ife
 	if (${1:true}) {
-		${2:${VISUAL}}
+		${2:$TM_SELECTED_TEXT}
 	} else {
 		${0}
 	}
 # else
 snippet el
 	else {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 # else if
 snippet elif
 	else if (${1:true}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 # ifi
 snippet ifi
@@ -126,16 +126,16 @@ snippet forr
 # while
 snippet wh
 	while (${1:1}) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 snippet wht
 	while (true) {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	}
 # do... while
 snippet do
 	do {
-		${0:${VISUAL}}
+		${0:$TM_SELECTED_TEXT}
 	} while ($1);
 ##
 ## Functions
